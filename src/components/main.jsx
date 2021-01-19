@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 
 const Main = () => {
 
+    // onMouseDown, onMouseEnter, onMouseLeave
+
     let colours = [
+        'white',
+        'black',
         'red',
         'blue', 
         'green', 
         'purple', 
         'orange',
-        'white',
-        'black',
         'yellow'
     ];
 
@@ -39,7 +41,7 @@ const Main = () => {
     ]
     
     return (
-        <p>
+        <>
             <input type="number" min="1" value={ width } onChange={(e) => setWidth(e.target.value)}/> <br/>
             <input type="number" min="1" value={ height } onChange={(e) => setHeight(e.target.value)} /> <br/>
 
@@ -48,7 +50,7 @@ const Main = () => {
             </select>
 
             { cells.map(row => <div className="row">{ row }</div>) }
-        </p>
+        </>
     );
 
 };
